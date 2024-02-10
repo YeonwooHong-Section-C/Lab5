@@ -13,17 +13,20 @@
 
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="myHeader">
         <section class="head"><p>MUSIC SITE</p></section>
+        <section class="section-item"><p>Home</p></section>
         <section class="section-item"><p>Genre</p></section>
         <section class="section-item"><p>Artists</p></section>
+        <section class="section-item"><p>Albums</p></section>
         <section class="section-item"><p>Events</p></section>
     </header> 
+
     <div class="title">
-        <h1 class="">Welcome</h1>
-        <p class="">featured artists</p>
+        <h1>Welcome to the music site</h1>
+        <h3>Featured artists</h3>
     </div>
-    <!-- iframe -->
+
     <article class="card-wrap">
     <div class="card-wrapper">
         <div class="card">
@@ -90,12 +93,31 @@
         </div>
         <div class="videos">
             <h1>Upcoming Events</h1>
-            <iframe class="video" src="https://placehold.co/1920x1080.mp4" title="The most attrative banana"></iframe>
+            <iframe class="video" src="https://www.youtube.com/watch?v=Q5S6sFZyWRE"></iframe>
         </div>
-        
     </article>
+
+    <div class="ticket">Get new event tickets</div>
+
     <footer class="footer"><span class="material-symbols-outlined">
         copyright
         </span>2024 Music Site. All rights reserved by Yeonu</footer>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+    </script>
 </body>
 </html>
