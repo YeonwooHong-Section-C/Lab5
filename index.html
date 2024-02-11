@@ -14,10 +14,10 @@
 </head>
 <body>
     <header class="header" id="myHeader">
-        <section class="head"><p>CPF Music Site</p></section>
-        <section class="section-item"><p>Home</p></section>
-        <section class="section-item"><p>Artists</p></section>
-        <section class="section-item"><p>Events</p></section>
+        <div class="head" id="home"><p>CPF Music Site</p></div>
+        <section class="section-item" id="header-home"><p>Home</p></section>
+        <section class="section-item" id="header-artists"><p>Artists</p></section>
+        <section class="section-item" id="header-events"><p>Events</p></section>
     </header> 
 
     <div class="title">
@@ -26,7 +26,7 @@
     </div>
 
     <article class="card-wrap">
-    <div class="card-wrapper">
+    <div class="card-wrapper" id="artists">
         <div class="card">
             <a href="https://www.youtube.com/results?search_query=Fr%C3%A9d%C3%A9ric+Chopin">
                 <img src="https://www.gramophone.co.uk/media/242556/chopin-s-two-books-of-e-tudes-have-been-described-as-a-perfect-fusion-of-the-athletic-and-the-aesthetic.jpg?&width=780&quality=60">
@@ -109,7 +109,7 @@
             <div class="audio-wrapper"><audio controls src="audios/Brendan_Kinsella_-_Mozart_-_Sonata_No_13_In_B_Flat_Major_K333_-_II_Andante_Cantabile.ogg.mp3"></audio><p class="track-info">Mozart, Sonata No.13 In B Flat Major K333</p></div>
             <div class="audio-wrapper"><audio controls src="audios/Karine_Gilanyan_-_Beethoven_-_Piano_Sonata_nr15_in_D_major_op28_Pastoral_-_III_Scherzo_Allegro_Vivace(chosic.com).mp3"></audio><p class="track-info">Beethoven, Piano Sonata nr15 in D major op28 Pastoral</p></div>
         </div>
-        <div class="videos">
+        <div class="videos" id="events">
             <h1>Upcoming Events</h1>
             <iframe class="video" src="https://www.youtube.com/watch?v=rdSVl452HzM"></iframe>
 
@@ -135,6 +135,16 @@
                 header.classList.remove("sticky");
             }
         }
+
+        // const section = document.querySelectorAll('[id^=header-]');
+        // console.log(this.id)
+        // console.log($(this).attr("id"));
+        // const id = this.id.split('-')[1] 
+        // const scroll = document.getElementById(id);
+
+        // section.addEventListener('click', () => {
+        //     window.scrollBy({top: scroll.getBoundingClientRect().top, behavior: 'smooth'});
+        // });
 
     </script>
 </body>
